@@ -33,6 +33,9 @@ console.log(`The dementions of the iamge is, Hight: ${hight} pixels and Width ${
 
 // Create an object that looks like this, and log it to the console:
 
+const imageTag = document.querySelector("img");
+const url = imageTag.getAttribute("src");
+
 /*{
   url: string
   height: number,
@@ -40,9 +43,9 @@ console.log(`The dementions of the iamge is, Hight: ${hight} pixels and Width ${
 }*/
 
 const topping = {
-    url: "string",
-    height: 13,
-    width: 15,
+    url: url,
+    height: hight,
+    width: width,
 }
 
 console.log(topping);
@@ -71,3 +74,26 @@ console.log(ing4text)
   order: number;
   text: instruction;
 }*/
+
+const instruktionList = document.querySelector(".instructions-list");
+const listchildren = instruktionList.children;
+
+const arrayInstructions = [];
+
+for( i = 0; i < listchildren.length; i++){
+    const instructionObject = {
+        order: i + 1,
+        text: listchildren[i].innerText,
+    };
+    arrayInstructions.push(instructionObject);
+}
+
+console.log(arrayInstructions)
+
+/* failing try 1
+const stepp1 = {
+    order: 1,
+    text: listchildren[1].innerText,
+}*/
+
+
