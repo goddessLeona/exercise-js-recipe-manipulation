@@ -121,3 +121,16 @@ const time = document.querySelector(".time-container > span");
 const addClassTime = time.setAttribute("class", "material-icons");
 
 // Uppgift 6: The estimated time of the recipe is also incorrect. Change it to the correct time estimation.
+
+const timeMin = document.querySelector(".time");
+timeMin.innerText = "60+ min";
+
+// Uppgift 7: The src path to the image is wrong, or atleast it's showing the wrong image. 
+// Change it to the correct one. The available images can be found in the assets folder. (fick hjölp)
+
+const imgcake = document.querySelector("img");
+imgcake.src = "assets/frozen-cheesecake-slice.jpg"
+
+
+
+
