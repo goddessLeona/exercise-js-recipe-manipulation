@@ -102,3 +102,22 @@ classLogo.style.color = "black"
 // Uppgift 2: The alignment of the elements inside the header element are wrong. 
 // Change it to the correct one. Hint, check the flex properties for the correct alignment. 
 // Here is a link that might help: https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+
+
+// Uppgift 3: The header has a border at the bottom, but it has the wrong color. Change it do the correct one.
+
+const header = document.querySelector("header")
+header.style.borderBottomColor = "black";
+
+// Uppgift 4: The recipe name is wrong, change it to the correct one.
+
+const cakeName = document.querySelector("h1");
+cakeName.innerText ="Frozen Cheescake"
+
+// Uppgift 5: The clock icon beneath the recipe name has disappeared and been replaced by a text instead. 
+// This can be fixed by adding a class to that element. 
+
+const time = document.querySelector(".time-container > span");
+const addClassTime = time.setAttribute("class", "material-icons");
+
+// Uppgift 6: The estimated time of the recipe is also incorrect. Change it to the correct time estimation.
