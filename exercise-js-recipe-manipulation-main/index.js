@@ -68,7 +68,7 @@ const ing4text = ingr4.innerText;
 console.log(ing4text)
 
 // Uppgift 8: Create an an array of objects from the instructions. 
-// Each element in the array should be an object that looks like this:
+// Each element in the array should be an object that looks like this: (fick hjälp med loopen)
 
 /*{
   order: number;
@@ -90,10 +90,15 @@ for( i = 0; i < listchildren.length; i++){
 
 console.log(arrayInstructions)
 
-/* failing try 1
-const stepp1 = {
-    order: 1,
-    text: listchildren[1].innerText,
-}*/
+
+// Dom manipulation part 2
+
+// Uppgift 1: The logo text of the site has the wrong color. Change it to the correct one.
+
+const classLogo = document.querySelector("header > p");
+classLogo.style.color = "black"
 
 
+// Uppgift 2: The alignment of the elements inside the header element are wrong. 
+// Change it to the correct one. Hint, check the flex properties for the correct alignment. 
+// Here is a link that might help: https://css-tricks.com/snippets/css/a-guide-to-flexbox/
