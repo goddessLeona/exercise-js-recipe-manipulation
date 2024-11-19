@@ -131,6 +131,21 @@ timeMin.innerText = "60+ min";
 const imgcake = document.querySelector("img");
 imgcake.src = "assets/frozen-cheesecake-slice.jpg"
 
+// Uppgift 8: The background color of the ingredients list container is wrong. Fix it.
 
+const articalClass = document.querySelector(".how-to-do .ingredients-container");
+articalClass.style.background = "#f9f9f9";
 
+// Uppgift 9: The ingredients are divided in to two parts, one for the bottom and one for the paste. 
+// In the list of the ingredients to the bottom, there is a text instead of two list items. 
+// Remove the text and add those two list items.
+
+const listIngridents = document.querySelectorAll("ul.ingredients-list-paste li");
+console.log(listIngridents)
+
+listIngridents[2].innerText = "3tsk vaniljsocker"
+
+const newLiEliment = document.createElement("li");
+newLiEliment.innerText = "400g naturell philadelphiaost";
+console.log(newLiEliment)
 
