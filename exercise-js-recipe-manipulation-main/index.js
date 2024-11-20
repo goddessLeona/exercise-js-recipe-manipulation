@@ -103,6 +103,8 @@ classLogo.style.color = "black"
 // Change it to the correct one. Hint, check the flex properties for the correct alignment. 
 // Here is a link that might help: https://css-tricks.com/snippets/css/a-guide-to-flexbox/
 
+const headernew = document.querySelector("header")
+headernew.style.justifyContent ="flex-start"
 
 // Uppgift 3: The header has a border at the bottom, but it has the wrong color. Change it do the correct one.
 
@@ -138,14 +140,44 @@ articalClass.style.background = "#f9f9f9";
 
 // Uppgift 9: The ingredients are divided in to two parts, one for the bottom and one for the paste. 
 // In the list of the ingredients to the bottom, there is a text instead of two list items. 
-// Remove the text and add those two list items.
+// Remove the text and add those two list items. 
+
+const bottomList = document.querySelector(".ingredients-list-bottom");
+
+bottomList.removeChild(bottomList.firstElementChild);
+
+const addNewIngridents = `<ul class="ingredients-list-bottom"><li>15st digistivetex</li><li>Lite smör</li></ul>`
+bottomList.insertAdjacentHTML("afterend", addNewIngridents)
+
+// Uppgift 10: The third ingredient in the list of ingredients to the paste is wrong. 
+// Change that specific ingredient to the correct one. (fick hjälp)
 
 const listIngridents = document.querySelectorAll("ul.ingredients-list-paste li");
-console.log(listIngridents)
 
 listIngridents[2].innerText = "3tsk vaniljsocker"
 
-const newLiEliment = document.createElement("li");
-newLiEliment.innerText = "400g naturell philadelphiaost";
-console.log(newLiEliment)
+const ulList = document.querySelector(".ingredients-container .ingredients-list-paste");
 
+const missingIngridient = "<li>400g naturell philadelphiaost</li>";
+ulList.insertAdjacentHTML("beforeend", missingIngridient )
+
+// Uppgift 11: There is also a missing ingredient in the list of ingredients to the paste. 
+// Look and see what it is and add that one the the end of the list.
+
+// Look fine to me... ?
+
+// Uppgift 12: The text "Instructions" to the left, beneath the image, has some shadow styling applied to it. 
+//Remove that styling.
+
+const shadow = document.querySelector("h3.shadow")
+shadow.classList.remove("shadow")
+
+// Uppgift 13: Two list elements of the list of instructions are incorrect. 
+//Find them and change them to the correct ones.
+
+const listInstruktionsnew = document.querySelectorAll(".instructions-list li")
+
+const nr2Instruktion = listInstruktionsnew[1];
+const nr3Instruktion = listInstruktionsnew[8];
+nr2Instruktion.innerText ="Separera ägggulor och äggvitor. Äggvitorna lägger du i en stor bunke, äggulorna i en liten bunke."
+nr3Instruktion.innerText ="Ställ in i frysen över natten."
